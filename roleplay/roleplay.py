@@ -277,7 +277,7 @@ class Roleplay(BaseCog):
                 "https://cdn.nekos.life/v3/sfw/gif/smug/smug_057.gif",
                 "https://i.kym-cdn.com/photos/images/original/001/087/562/93c.gif",
                 "https://i.kym-cdn.com/photos/images/newsfeed/001/161/167/eda.gif",
-                "https://tenor.com/view/maou-gakuin-no-futekigousha-misfit-at-demon-king-academy-snap-anos-voldigoad-arnos-voltegourde-gif-18202977",
+                "https://media1.tenor.com/images/a526b58b3e21c82f94123b1cd76fba7c/tenor.gif?itemid=18202977",
                 "https://media1.tenor.com/images/d9b3127da3f9419cbb28f9f7c00860d8/tenor.gif?itemid=9588226",
                 "https://media1.tenor.com/images/0097fa7f957477f9edc5ff147bb9a5ad/tenor.gif?itemid=12390496",
 
