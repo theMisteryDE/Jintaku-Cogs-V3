@@ -473,7 +473,7 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.poking()
 
-        nekos = await self.fetch_nekos_life(ctx, "poking")
+        nekos = await self.fetch_nekos_life(ctx, "poke")
         images.extend(nekos)
 
         mn = len(images)
