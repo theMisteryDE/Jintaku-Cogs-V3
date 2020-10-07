@@ -268,23 +268,6 @@ class Roleplay(BaseCog):
                 "https://media1.tenor.com/images/d38554c6e23b86c81f8d4a3764b38912/tenor.gif?itemid=11379131",
                 "https://media1.tenor.com/images/05a64a05e5501be2b1a5a734998ad2b2/tenor.gif?itemid=11379130",
             ],
-            "poke": [
-                "https://img2.gelbooru.com/images/07/86/078690a58e0b816e8e00cc58e090b499.gif",
-                "https://img2.gelbooru.com/images/b7/89/b789369db69022afde47a1ed62598ec6.gif",
-                "https://img2.gelbooru.com/images/49/ec/49ecc543b7b0b680ad0c27c29e942a21.gif",
-                "https://img2.gelbooru.com/images/91/ef/91ef340231f6d537836e23c8ab90a255.gif",
-                "https://img2.gelbooru.com/images/62/d9/62d9a16a640bfcd25dd6159e53fc50d2.gif",
-                "https://img2.gelbooru.com/images/1d/8b/1d8b77bf65858101a82d195deaa39252.gif",
-                "https://img2.gelbooru.com/images/c0/22/c022dc318c7f014d7bac6c2300b9f7a2.gif",
-                "https://media1.tenor.com/images/3b2bfd09965bd77f2a8cb9ba59cedbe4/tenor.gif?itemid=5607667",
-                "https://media1.tenor.com/images/514efe749cb611eb382713596e3427d8/tenor.gif?itemid=13054528",
-                "https://media1.tenor.com/images/8795ff617de989265907eed8029a99a3/tenor.gif?itemid=14629871",
-                "https://media1.tenor.com/images/1e0ea8b241a7db2b9c03775133138733/tenor.gif?itemid=10064326",
-                "https://media1.tenor.com/images/90f68d48795c51222c60afc7239c930c/tenor.gif?itemid=8701034",
-                "https://media1.tenor.com/images/01b264dc057eff2d0ee6869e9ed514c1/tenor.gif?itemid=14346763",
-                "https://media1.tenor.com/images/f8a48a25f47d5d12342705c7c87368bb/tenor.gif?itemid=14134415",
-                "https://media.tenor.com/images/6b5c1554a6ee9d48ab0392603bab8a8e/tenor.gif",
-            ],
             "smug": [
                 "https://cdn.nekos.life/v3/sfw/gif/smug/smug_027.gif",
                 "https://cdn.nekos.life/v3/sfw/gif/smug/smug_057.gif",
@@ -474,27 +457,6 @@ class Roleplay(BaseCog):
         # Build Embed
         embed = discord.Embed()
         embed.description = f"**{author.mention} tickles {user.mention}**"
-        embed.set_footer(text="Made with the help of nekos.life")
-        embed.set_image(url=images[i])
-        await ctx.send(embed=embed)
-
-    @commands.command()
-    @commands.bot_has_permissions(embed_links=True)
-    async def poke(self, ctx, *, user: discord.Member):
-        """Pokes a user!"""
-
-        author = ctx.message.author
-        images = await self.config.poke()
-
-        nekos = await self.fetch_nekos_life(ctx, "poke")
-        images.extend(nekos)
-
-        mn = len(images)
-        i = randint(0, mn - 1)
-
-        # Build Embed
-        embed = discord.Embed()
-        embed.description = f"**{author.mention} pokes {user.mention}**"
         embed.set_footer(text="Made with the help of nekos.life")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
